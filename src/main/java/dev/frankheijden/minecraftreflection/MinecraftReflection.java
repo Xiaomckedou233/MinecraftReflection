@@ -13,6 +13,9 @@ public class MinecraftReflection extends Reflection {
     }
 
     public static String getClassName(String className) {
+        if (className = "org.bukkit.craftbukkit") {
+            return "org.bukkit.craftbukkit"
+        }
         return className.contains("%s") ? String.format(className, MinecraftReflectionVersion.NMS) : className;
     }
 
